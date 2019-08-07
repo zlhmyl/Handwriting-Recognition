@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<style>
+body{
+	text-algn:center;
+}
+.header{
+	color:black;
+	font-size:30px;
+	padding:10px;
+	text-align:center;
+}
+table{
+	text-align:center;
+	margin:auto;
+	width:30%;
+	filter:alpha(opacity=40);
+	color:black;
+}
+</style>
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>Upload Page</title>
+</head>
+
+<body>
+	<div class="header">Welcome to Handwriting Recognition system</div>
+	<div class="header">Please upload your image for recognition</div>
+	<form method="POST" enctype="multipart/form-data" action="/upload">
+		<table>
+			<tr>
+				<td>图片<input type="file" name="image"/></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><input type="submit" value="upload" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>

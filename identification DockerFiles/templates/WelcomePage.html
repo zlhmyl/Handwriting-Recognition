@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<style>
+body{
+	text-algn:center;
+}
+.header{
+	color:black;
+	font-size:30px;
+	padding:10px;
+	text-align:center;
+}
+table{
+	text-align:center;
+	margin:auto;
+	width:30%;
+	filter:alpha(opacity=40);
+	color:black;
+}
+</style>
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>Welcome Page</title>
+</head>
+
+<body>
+	<div class="header">Welcome to zlh's system</div>
+	<form method="POST" action="/login">
+		<table>
+			<tr>
+				<td>请先登录</td>
+			</tr>
+			<tr>
+				<td>Username:<input type="text" name="username" placeholder="Username"/></td>
+			</tr>
+			<tr>
+				<td>Password:<input type="text" name="password" placeholder="Password"/></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><input type="submit" value="login" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>
