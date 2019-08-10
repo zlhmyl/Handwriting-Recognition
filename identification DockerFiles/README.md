@@ -1,3 +1,3 @@
 This is a project for handwriting digit recognization.
-The app.py is runned in local PC and the cassandra DB is on the docker.
+The DOckerfile create a image for the whole project and the cassandra DB is in another container of docker.
 Dockerfile is uncomplete.
