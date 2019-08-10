@@ -4,7 +4,7 @@ Created on Fri Aug  2 15:43:56 2019
 
 @author: SA
 """
-
+#/usr/bin/env python3
 from flask import request, Flask, render_template
 #from redis import Redis, RedisError
 import tensorflow as tf
@@ -91,7 +91,7 @@ def get_image():
         saver = tf.compat.v1.train.Saver()
         with tf.compat.v1.Session() as sess:
             sess.run(init_op)
-            saver.restore(sess, "F:/test/models/model2/model_2.ckpt")#这里使用了之前保存的模型参数
+            saver.restore(sess, "./model_2/model_2.ckpt")#这里使用了之前保存的模型参数
             prediction=tf.argmax(y_conv,1)
             predint=prediction.eval(feed_dict={x: [result],rate: 1.0}, session=sess)
             print('recognize result:')
@@ -103,6 +103,6 @@ def get_image():
         return render_template('failed.hmtl')
 
 if __name__ == "__main__":
-    #app.debug=True
-    app.run()
-    #app.run(host='0.0.0.0', port=80)
+    app.debug=True
+    #app.run()
+    app.run(host='0.0.0.0', port=5000)
