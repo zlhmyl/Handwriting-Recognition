@@ -22,7 +22,7 @@ from cassandra.query import SimpleStatement
 KEYSPACE = "Users"
 
 def createKeySpace():
-   cluster = Cluster(contact_points=['127.0.0.1'],port=9042)
+   cluster = Cluster(contact_points=['172.18.0.3'],port=9042)#cassandra container ip address
    session = cluster.connect()
 
    log.info("Creating keyspace...")
@@ -51,7 +51,7 @@ def createKeySpace():
 #createKeySpace();
 
 def insertData(file_name,number):
-    cluster = Cluster(contact_points=['127.0.0.1'],port=9042)
+    cluster = Cluster(contact_points=['172.18.0.3'],port=9042)
     session = cluster.connect()
     session.execute("use %s" % KEYSPACE)
     session.execute('INSERT INTO USerInfo(timestamp,imagename,predict_number)VALUES(toTimestamp(now()),%s,%s);',[file_name,number])
