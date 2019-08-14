@@ -9,7 +9,7 @@ This is a system that can recognize handwriting digits in images. The system is 
 
 Demo
 ---
-![image](https://github.com/zlhmyl/Handwrting-Recognition/系统演示demo.gif)
+![image](https://github.com/zlhmyl/Handwriting-Recognition/系统演示demo.gif)
 
 Project Structure
 ---
